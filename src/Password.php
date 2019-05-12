@@ -24,10 +24,6 @@ class Password
 
     public function __construct(int $options = self::OPTION_ALLOW_DOUBLE_CHARS)
     {
-        if ($options === 0) {
-            return;
-        }
-
         if ((self::OPTION_ALLOW_UNCLEAR_CHARS & $options) !== 0) {
             $this->allowUnClearChars = true;
         }
@@ -125,7 +121,7 @@ class Password
             $password .= $this->getRandomChar();
         }
 
-        return str_shuffle($password);
+        return \str_shuffle(\str_shuffle($password));
     }
 
     private function getRandomChar() : string
