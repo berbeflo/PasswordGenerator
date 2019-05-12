@@ -1,0 +1,15 @@
+### Composer ###
+/vendor/
+
+### VisualStudioCode ###
+.vscode/*
+
+### Misc ###
+message.txt
+
+### Cache-Files ###
+.php_cs.cache
+.phpunit.result.cache
+
+### Code-Coverage ###
+/cc/
